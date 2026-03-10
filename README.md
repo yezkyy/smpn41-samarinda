@@ -1,59 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Website Resmi SMPN 41 Samarinda
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![Laravel Version](https://img.shields.io/badge/Laravel-v12.0-red.svg)](https://laravel.com)
+[![PHP Version](https://img.shields.io/badge/PHP-v8.2+-blue.svg)](https://www.php.net)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## About Laravel
+Website profil sekolah SMPN 41 Samarinda yang dibangun menggunakan framework Laravel 12. Sistem ini mencakup profil sekolah, manajemen berita, prestasi, guru, galeri, dan dokumen sekolah.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🌐 Frontend (Publik)
+- **Beranda**: Informasi umum, berita terbaru, dan sekilas profil sekolah.
+- **Profil Sekolah**: Sejarah, visi & misi, dan struktur organisasi.
+- **Direktori Guru**: Daftar tenaga pendidik beserta detailnya.
+- **Berita & Pengumuman**: Informasi terbaru seputar kegiatan sekolah.
+- **Galeri**: Dokumentasi foto kegiatan sekolah.
+- **Prestasi**: Daftar pencapaian siswa dan sekolah.
+- **Download Dokumen**: Akses dokumen publik (PDF/Docs) yang dapat diunduh.
+- **Kontak**: Informasi kontak dan lokasi sekolah.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🔐 Backend (Admin Panel)
+- **Dashboard**: Ringkasan data sistem.
+- **Manajemen Berita**: CRUD berita dengan dukungan kategori dan gambar.
+- **Manajemen Guru**: Pengelolaan data tenaga pendidik.
+- **Manajemen Galeri**: Upload dan kelola album foto kegiatan.
+- **Manajemen Prestasi**: Dokumentasi pencapaian sekolah.
+- **Manajemen Dokumen**: Upload file untuk kebutuhan publik.
+- **Manajemen Ekstrakurikuler**: Informasi kegiatan non-akademik.
 
-## Learning Laravel
+## 🛠️ Tech Stack
+- **Framework**: Laravel 12
+- **Frontend**: Tailwind CSS, Vite
+- **Database**: MySQL / MariaDB
+- **PHP Version**: ^8.2
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Panduan Instalasi
 
-## Laravel Sponsors
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di lingkungan lokal Anda.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 📋 Prasyarat
+Pastikan Anda sudah menginstal:
+- [PHP >= 8.2](https://www.php.net/downloads.php)
+- [Composer](https://getcomposer.org/download/)
+- [Node.js & NPM](https://nodejs.org/en/download/)
+- [MySQL](https://www.mysql.com/downloads/) atau aplikasi server lokal seperti XAMPP/Laragon.
 
-### Premium Partners
+### 1. Clone Repository
+Buka terminal dan jalankan perintah berikut:
+```bash
+git clone https://github.com/username/smpn41-samarinda.git
+cd smpn41-samarinda
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 2. Instal Dependensi PHP
+```bash
+composer install
+```
 
-## Contributing
+### 3. Instal Dependensi Frontend (NPM)
+```bash
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4. Konfigurasi Environment
+Salin file `.env.example` menjadi `.env`:
+```bash
+cp .env.example .env
+```
+Kemudian buka file `.env` dan sesuaikan konfigurasi database Anda:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database_anda
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## Code of Conduct
+### 5. Generate Application Key
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 6. Migrasi Database & Seeding
+Jalankan migrasi untuk membuat tabel dan masukkan data awal (seperti akun admin dan data guru):
+```bash
+php artisan migrate --seed
+```
 
-## Security Vulnerabilities
+### 7. Link Storage
+Buat symbolic link agar file yang diupload di folder storage dapat diakses secara publik:
+```bash
+php artisan storage:link
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 8. Jalankan Server
+Buka dua terminal berbeda untuk menjalankan server Laravel dan Vite (untuk CSS/JS):
 
-## License
+**Terminal 1 (Laravel Server):**
+```bash
+php artisan serve
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Terminal 2 (Vite Compiler):**
+```bash
+npm run dev
+```
+
+Website sekarang dapat diakses melalui browser di: `http://127.0.0.1:8000`
+
+---
+
+## 🔑 Akun Default Admin
+Setelah melakukan `php artisan migrate --seed`, Anda dapat login ke halaman admin:
+- **URL Login**: `http://127.0.0.1:8000/login`
+- **Email**: `admin@smpn41samarinda.sch.id` (Sesuaikan dengan isi DatabaseSeeder)
+- **Password**: `password`
+
+## 📁 Struktur Folder Utama
+- `app/Http/Controllers/Admin`: Logic untuk panel admin.
+- `app/Models`: Definisi skema database.
+- `resources/views/pages`: Halaman tampilan frontend.
+- `resources/views/admin`: Halaman tampilan panel admin.
+- `routes/web.php`: Definisi semua route/URL.
+
+---
+
+## 📄 Lisensi
+Proyek ini bersifat open-source di bawah lisensi [MIT](LICENSE).
